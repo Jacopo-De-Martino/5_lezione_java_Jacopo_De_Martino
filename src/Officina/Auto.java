@@ -1,3 +1,5 @@
+package Officina;
+
 public class Auto {
     // ! Attributi
     String targa;

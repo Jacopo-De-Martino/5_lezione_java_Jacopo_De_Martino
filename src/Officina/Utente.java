@@ -1,3 +1,5 @@
+package Officina;
+
 public class Utente {
     String nome;
     String email;

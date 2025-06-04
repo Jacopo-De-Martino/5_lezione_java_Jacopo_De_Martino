@@ -1,3 +1,5 @@
+package Officina;
+
 import java.util.Scanner;
 
 public class App {
