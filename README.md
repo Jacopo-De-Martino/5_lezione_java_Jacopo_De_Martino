@@ -67,3 +67,63 @@ astratto La classe non può essere usata per creare oggetti
 - Flessibile: il programmatore può modificare una parte del codice senza influire sulle altre parti
 
 - Maggiore sicurezza e mascheramento dei dati
+
+public List<Aereo> filtraAereiPerPosti(int minPosti, int maxPosti) {
+List<Aereo> aereiFiltrati = new ArrayList<>();
+for (Aereo aereo : aerei) {
+if (aereo.getNumeroPosti() >= minPosti && aereo.getNumeroPosti() <= maxPosti) {
+aereiFiltrati.add(aereo);
+}
+}
+return aereiFiltrati;
+}
+
+    public List<Pilota> filtraPilotiPerOreVolo(int minOre, int maxOre) {
+        List<Pilota> pilotiFiltrati = new ArrayList<>();
+        for (Pilota pilota : piloti) {
+            if (pilota.getOreVolo() >= minOre && pilota.getOreVolo() <= maxOre) {
+                pilotiFiltrati.add(pilota);
+            }
+        }
+        return pilotiFiltrati;
+    }
+
+    public List<Aereo> filtraAereiPerModello(String modello) {
+        List<Aereo> aereiFiltrati = new ArrayList<>();
+        for (Aereo aereo : aerei) {
+            if (aereo.getModello().equalsIgnoreCase(modello)) {
+                aereiFiltrati.add(aereo);
+            }
+        }
+        return aereiFiltrati;
+    }
+
+    public List<Pilota> filtraPilotiPerNome(String nome) {
+        List<Pilota> pilotiFiltrati = new ArrayList<>();
+        for (Pilota pilota : piloti) {
+            if (pilota.getNome().equalsIgnoreCase(nome)) {
+                pilotiFiltrati.add(pilota);
+            }
+        }
+        return pilotiFiltrati;
+    }
+
+    public List<Aereo> filtraAereiPerCodiceIdentificativo(String codice) {
+        List<Aereo> aereiFiltrati = new ArrayList<>();
+        for (Aereo aereo : aerei) {
+            if (aereo.getCodiceIdentificativo().equalsIgnoreCase(codice)) {
+                aereiFiltrati.add(aereo);
+            }
+        }
+        return aereiFiltrati;
+    }
+
+    public List<Pilota> filtraPilotiPerCodiceBrevettato(String codice) {
+        List<Pilota> pilotiFiltrati = new ArrayList<>();
+        for (Pilota pilota : piloti) {
+            if (pilota.getNumeroBrevetto().equalsIgnoreCase(codice)) {
+                pilotiFiltrati.add(pilota);
+            }
+        }
+        return pilotiFiltrati;
+    }
